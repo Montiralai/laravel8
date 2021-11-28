@@ -1,7 +1,7 @@
 <html>
 
 <body>
-    <h1>gallery of Montiralai 62222420017, <br>
+    <h1>Gallery of Montiralai 62222420017, <br>
 
         <a href="ant">
             <img src="{{ $ant}}" style="height:30%;">
