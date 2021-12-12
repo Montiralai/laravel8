@@ -110,3 +110,5 @@ Route::get("/student/component", function () {
 Route::get('/tables', function () {
     return view('tables');
 });
+
+
