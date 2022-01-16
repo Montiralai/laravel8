@@ -17,10 +17,11 @@ class CreateStaffTable extends Migration
             $table->id();
             $table->timestamps();
 
-            $table->string('Name')->nullable();
-            $table->integer('Age')->nullable();
-            $table->integer('Salary')->nullable();
-            $table->string('Phone')->nullable();
+            
+            $table->string("Name")->nullable();
+            $table->integer("Age")->nullable();
+            $table->float("Salary",16,2)->nullable();
+            $table->string("Phone")->nullable();
             
         });
     }
