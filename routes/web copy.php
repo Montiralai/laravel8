@@ -138,19 +138,13 @@ Route::delete('/covid19/{id}', [Covid19Controller::class, 'destroy']);
 
 // Route::resource('/staff', StaffController::class );
 
-Route::get("/staff/create", [StaffController::class, "create"]);
-Route::get("/staff/{id}/edit", [StaffController::class, "edit"]);
-Route::get('/staff', [StaffController::class, "index"]);
-Route::get('/staff/{id}', [StaffController::class, 'show']);
-Route::post("/staff", [StaffController::class, "store"]);
-Route::patch("/staff/{id}", [StaffController::class, "update"]);
-Route::delete('/staff/{id}', [StaffController::class, 'destroy']);
+Route::get("/staff/create",[ StaffController::class , "create" ]);
+Route::get("/staff/{id}/edit", [ StaffController::class , "edit" ]);
+Route::get('/staff', [ StaffController::class,"index" ]);
+Route::get('/staff/{id}',[ StaffController::class,'show' ]);
+Route::post("/staff",[ StaffController::class , "store" ]);
+Route::patch("/staff/{id}", [ StaffController::class , "update" ]);
+Route::delete('/staff/{id}', [ StaffController::class , 'destroy' ]);
 
 
 Route::resource('post', PostController::class);
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
-require __DIR__ . '/auth.php';
