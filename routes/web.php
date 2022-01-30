@@ -83,9 +83,12 @@ Route::get("/cat", function () {
     return view("test/cat", compact("cat"));
 });
 
-Route::get("/teacher", function () {
-    return view("teacher");
+Route::middleware(['auth'])->group(function () {
+    Route::get("/teacher", function () {
+        return view("teacher");
+    });
 });
+
 
 Route::get("/student", function () {
     return view("student");
