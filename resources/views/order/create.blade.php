@@ -1,4 +1,4 @@
-<x-themequiz>
+<x-themequiz title="">
 
     <div class="container">
         <div class="row">
