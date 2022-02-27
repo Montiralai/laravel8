@@ -1,3 +1,5 @@
+<x-themequiz title="">
+    
 <div class="form-group {{ $errors->has('user_id') ? 'has-error' : ''}}">
     <label for="user_id" class="control-label">{{ 'User Id' }}</label>
     <input class="form-control" name="user_id" type="number" id="user_id" value="{{ isset($order->user_id) ? $order->user_id : ''}}" >
@@ -18,6 +20,8 @@
     <input class="form-control" name="status" type="text" id="status" value="{{ isset($order->status) ? $order->status : ''}}" >
     {!! $errors->first('status', '<p class="help-block">:message</p>') !!}
 </div>
+<x-themequiz title="">
+
 <div class="form-group {{ $errors->has('checking_at') ? 'has-error' : ''}}">
     <label for="checking_at" class="control-label">{{ 'Checking At' }}</label>
     <input class="form-control" name="checking_at" type="datetime-local" id="checking_at" value="{{ isset($order->checking_at) ? $order->checking_at : ''}}" >
@@ -48,3 +52,4 @@
 <div class="form-group">
     <input class="btn btn-primary" type="submit" value="{{ $formMode === 'edit' ? 'Update' : 'Create' }}">
 </div>
+</x-themequiz>
